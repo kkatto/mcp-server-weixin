@@ -1,5 +1,5 @@
 server:
-#  port: 7071
+  port: 8102
   servlet:
     encoding:
       charset: UTF-8
@@ -11,7 +11,8 @@ spring:
     name: mcp-server-weixin
   main:
     banner-mode: off
-    web-application-type: none
+    # stdio 模式打开，sse 模式，注释掉。
+    # web-application-type: none
   ai:
     mcp:
       server:
@@ -27,8 +28,9 @@ weixin:
     touser: o_9Y9vhED_5nSonj-QTzGPRH4XQE
 
 logging:
-  pattern:
-    console:
+  # stdio 模式打开，sse 模式，注释掉。
+#  pattern:
+#    console:
   file:
     name: data/log/${spring.application.name}.log
 
